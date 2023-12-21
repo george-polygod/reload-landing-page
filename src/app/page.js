@@ -47,12 +47,12 @@ const Home = () => {
                             </li>
                             <li>
                                 <Link href="">
-                                    <Image src="/assets/svgs/facebook.svg" width={50} height={50} alt="Facebook reload"/>
+                                    <Image src="/assets/svgs/facebook.svg" width={50} height={50} alt="facebook reload"/>
                                 </Link>
                             </li>
                             <li>
                                 <Link href="">
-                                    <Image src="/assets/svgs/instagram.svg" width={50} height={50} alt="Instagram reload"/>
+                                    <Image src="/assets/svgs/instagram.svg" width={50} height={50} alt="instagram reload"/>
                                 </Link>
                             </li>
                         </ul>
