@@ -19,7 +19,7 @@ const rem = localFont({
 })
 export default function RootLayout({children}) {
     return (
-        <html data-wf-page="0" lang="en">
+        <html lang="en">
         <head>
             <meta charSet="utf-8"/>
             <title> Reload Games</title>
