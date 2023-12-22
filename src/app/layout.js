@@ -19,7 +19,32 @@ const rem = localFont({
 })
 export default function RootLayout({children}) {
     return (
-        <html lang="en">
+        <html data-wf-page="0" lang="en">
+        <head>
+            <meta charSet="utf-8"/>
+            <title> Reload Games</title>
+            <link rel="icon" type="image/x-icon" href="/assets/images/logo.png"></link>
+
+            <meta content="Reload | Reload Games" property="og:title"/>
+            <meta
+                content="Reload the future of gaming, embark on unprecedented adventures in our flagship games Sacred Tails and Instinct."
+                property="og:description"
+            />
+            <meta content="Reload" property="twitter:title"/>
+            <meta
+                content="Reload the future of gaming, embark on unprecedented adventures in our flagship games Sacred Tails and Instinct."
+                property="twitter:description"
+            />
+            <meta content="width=device-width, initial-scale=1" name="viewport"/>
+            <meta
+                content="EXZi is the easiest way to buy, sell, and hold the most popular cryptocurrencies Get started with your first free trade*"
+                name="description"
+            />
+            <meta content="/images/page.png" property="twitter:image"/>
+            <meta property="og:type" content="website"/>
+            <meta content="summary_large_image" name="twitter:card"/>
+            <meta content="Webflow" name="generator"/>
+        </head>
         <body className={rem.className}>{children}</body>
         </html>
     )
