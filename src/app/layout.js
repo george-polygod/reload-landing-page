@@ -37,7 +37,7 @@ export default function RootLayout({children}) {
             />
             <meta content="width=device-width, initial-scale=1" name="viewport"/>
             <meta
-                content="EXZi is the easiest way to buy, sell, and hold the most popular cryptocurrencies Get started with your first free trade*"
+                content="Reload the future of gaming, embark on unprecedented adventures in our flagship games Sacred Tails and Instinct."
                 name="description"
             />
             <meta content="/images/page.png" property="twitter:image"/>
