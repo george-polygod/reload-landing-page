@@ -24,6 +24,7 @@ export default function RootLayout({children}) {
             <meta charSet="utf-8"/>
             <title> Reload Games</title>
             <link rel="icon" type="image/x-icon" href="/assets/images/logo.png"></link>
+            <meta name="keywords" content="reload , game, sacredTails ,sacred tails , sacred-tails, gaming, gaming legacy , player , instinct , trading">
 
             <meta content="Reload | Reload Games" property="og:title"/>
             <meta
