@@ -20,33 +20,7 @@ const rem = localFont({
 export default function RootLayout({children}) {
     return (
         <html lang="en">
-        <head>
-            <meta charSet="utf-8"/>
-            <title> Reload Games</title>
-            <link rel="icon" type="image/x-icon" href="/assets/images/logo.png"></link>
-            <meta name="keywords" content="reload , game, sacredTails ,sacred tails , sacred-tails, gaming, gaming legacy , player , instinct , trading">
-
-            <meta content="Reload | Reload Games" property="og:title"/>
-            <meta
-                content="Reload the future of gaming, embark on unprecedented adventures in our flagship games Sacred Tails and Instinct."
-                property="og:description"
-            />
-            <meta content="Reload" property="twitter:title"/>
-            <meta
-                content="Reload the future of gaming, embark on unprecedented adventures in our flagship games Sacred Tails and Instinct."
-                property="twitter:description"
-            />
-            <meta content="width=device-width, initial-scale=1" name="viewport"/>
-            <meta
-                content="Reload the future of gaming, embark on unprecedented adventures in our flagship games Sacred Tails and Instinct."
-                name="description"
-            />
-            <meta content="/images/page.png" property="twitter:image"/>
-            <meta property="og:type" content="website"/>
-            <meta content="summary_large_image" name="twitter:card"/>
-            <meta content="Webflow" name="generator"/>
-        </head>
         <body className={rem.className}>{children}</body>
         </html>
-    )
+)
 }

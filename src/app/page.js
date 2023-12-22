@@ -8,7 +8,7 @@ const Home = () => {
              style={{backgroundImage: 'url(/assets/images/background.png)'}}>
             <div className="text-center">
                 <div className="absolute top-0 left-0 right-0 flex items-center justify-center h-1/4">
-                    <img src="/assets/images/logo.png" alt="Logo" className=" mb-4"/>
+                    <img src="/assets/svgs/logo.svg" alt="Logo" className=" mb-4"/>
                 </div>
                 <div className="md:mx-0 mx-5">
                     <h1 className="md:text-6xl text-4xl font-bold text-white mb-2 uppercase">We are coming soon!</h1>
@@ -16,7 +16,8 @@ const Home = () => {
                         new site is live</p>
                     <div className="relative">
                         <div className="flex items-center">
-                            <img src="/assets/svgs/email.svg" alt="Email Icon" className="ml-2 mr-3 absolute" width={30} height={30} />
+                            <img src="/assets/svgs/email.svg" alt="Email Icon" className="ml-2 mr-3 absolute" width={30}
+                                 height={30}/>
                             <input
                                 type="text"
                                 className="w-full p-4 bg-transparent border border-[#08FAA6] my-4 pr-12 pl-10 text-white"
@@ -31,28 +32,23 @@ const Home = () => {
                     <div className="absolute bottom-0 left-0 right-0 flex items-center justify-center h-1/4">
                         <ul className="flex items-center justify-center gap-4">
                             <li>
-                                <Link href="/">
+                                <Link href="https://www.youtube.com/@ReloadGamesYT">
                                     <Image src="/assets/svgs/youtube.svg" width={50} height={50} alt="you tube reload"/>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="">
-                                    <Image src="/assets/svgs/discord.svg" width={40} height={40} alt="discord reload"/>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="">
+                                <Link href="https://twitter.com/r3loadgames">
                                     <Image src="/assets/svgs/Twitter.svg" width={50} height={50} alt="twitter reload"/>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="">
-                                    <Image src="/assets/svgs/Facebook.svg" width={50} height={50} alt="facebook reload"/>
+                                <Link href="https://t.me/reloadgames">
+                                    <Image src="/assets/svgs/tg.svg" width={50} height={50} alt="telegram reload"/>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="">
-                                    <Image src="/assets/svgs/instagram.svg" width={50} height={50} alt="instagram reload"/>
+                                <Link href="https://discord.com/invite/reloadgames">
+                                    <Image src="/assets/svgs/discord.svg" width={40} height={40} alt="discord reload"/>
                                 </Link>
                             </li>
                         </ul>
