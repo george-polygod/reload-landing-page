@@ -1,8 +1,24 @@
-import React from 'react';
+'use client'
+import React, {useState} from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import axios from "axios";
 
 const Home = () => {
+    const [email, setEmail] = useState('');
+    const handleGetDemo = async () => {
+        try {
+            const response = await fetch('https://www.zaibot.io/api/test', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept':'application/json'
+                },
+                body: JSON.stringify({ email }),
+            });
+        } catch (error) {
+        }
+    };
     return (
         <div className="min-h-screen flex flex-col items-center justify-center bg-cover bg-center bg-no-repeat"
              style={{backgroundImage: 'url(/assets/images/background.png)'}}>
@@ -22,10 +38,11 @@ const Home = () => {
                                 type="text"
                                 className="w-full p-4 bg-transparent border border-[#08FAA6] my-4 pr-12 pl-10 text-white"
                                 placeholder="Email"
+                                onChange={(e) => setEmail(e.target.value)}
                             />
                         </div>
                         <button
-                            className="absolute right-0 md:text-xl text-sm top-1/2 transform -translate-y-1/2 -translate-x-2 bg-[#08FAA6] md:px-8 px-4 py-2 text-black uppercase font-black ml-1">get
+                            className="absolute right-0 md:text-xl text-sm top-1/2 transform -translate-y-1/2 -translate-x-2 bg-[#08FAA6] md:px-8 px-4 py-2 text-black uppercase font-black ml-1" onClick={handleGetDemo}>get
                             demo!
                         </button>
                     </div>
