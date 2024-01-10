@@ -8,11 +8,10 @@ const Home = () => {
     const [email, setEmail] = useState('');
     const handleGetDemo = async () => {
         try {
-            const response = await fetch('https://www.zaibot.io/api/test', {
+            const response = await fetch('/email/api', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
-                    'Accept':'application/json'
+                    'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({ email }),
             });
@@ -60,12 +59,12 @@ const Home = () => {
                             </li>
                             <li>
                                 <Link href="https://t.me/reloadgames">
-                                    <Image src="/assets/svgs/tg.svg" width={50} height={50} alt="telegram reload"/>
+                                    <Image src="/assets/svgs/tg.svg" width={42} height={42} alt="telegram reload"/>
                                 </Link>
                             </li>
                             <li>
                                 <Link href="https://discord.com/invite/reloadgames">
-                                    <Image src="/assets/svgs/discord.svg" width={40} height={40} alt="discord reload"/>
+                                    <Image src="/assets/svgs/discord.svg" width={32} height={32} alt="discord reload"/>
                                 </Link>
                             </li>
                         </ul>

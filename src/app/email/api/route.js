@@ -1,34 +1,42 @@
 import {NextResponse, NextRequest} from 'next/server'
 
-const {createTransport} = require('nodemailer');
+export async function POST(request, {params}) {
 
-export async function GET(request) {
-    const transporter = createTransport({
+    const nodemailer = require("nodemailer");
+
+    const transporter = nodemailer.createTransport({
         host: "smtp-auth.mailprotect.be",
-        port: 467,
+        port: 465,
+        secure: true,
         auth: {
+            // TODO: replace user and pass values from <https://forwardemail.net>
             user: "info@reload.games",
             pass: "Ky5fYgltUzd7Sr3",
         },
     });
-
-    const mailOptions = {
-        from: 'georgesdagher98@hotmail.com',
-        to: 'georgesdagher98@hotmail.com',
-        subject: `Your subject`,
-        text: `Your text content`
-    };
-
-    var result = mailOptions
     try {
-        const app = await transporter.sendMail(mailOptions);
-        result = app
-    }
-    catch (e){
-        result=e
-    }
+        const json = await request.json()
+        const email = json.email
 
-
+        if (email) {
+            const info = await transporter.sendMail({
+                from: 'info@reload.games', // sender address
+                to: email, // list of receivers
+                subject: email + " Registered Interest On reload ✔", // Subject line
+                text: email + " Registered Interest On reload", // plain text body
+            });
+            const info2 = await transporter.sendMail({
+                from: 'info@reload.games', // sender address
+                to: 'info@reload.games', // list of receivers
+                subject: email + " Registered Interest On reload ✔", // Subject line
+                text: email + " Registered Interest On reload", // plain text body
+            });
+        } else {
+            return Response.json({"error": email})
+        }
+    } catch (e) {
+        return Response.json({"error": e.message})
+    }
     // const { searchParams } = new URL(request.url)
     // const id = searchParams.get('id')
     // const res = await fetch(`https://data.mongodb-api.com/product/${id}`, {
@@ -39,5 +47,5 @@ export async function GET(request) {
     // })
     // const product = await res.json()
 
-    return Response.json({'product': result})
+    return Response.json({'product': 'success'})
 }
