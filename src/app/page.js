@@ -54,7 +54,7 @@ const Home = () => {
                             </li>
                             <li>
                                 <Link href="https://twitter.com/r3loadgames">
-                                    <Image src="/assets/svgs/Twitter.svg" width={50} height={50} alt="twitter reload"/>
+                                    <Image src="/assets/svgs/twitter.svg" width={50} height={50} alt="twitter reload"/>
                                 </Link>
                             </li>
                             <li>
