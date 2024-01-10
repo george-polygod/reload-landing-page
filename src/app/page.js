@@ -15,6 +15,7 @@ const Home = () => {
                 },
                 body: JSON.stringify({ email }),
             });
+            alert('Your Email has been sent')
         } catch (error) {
         }
     };
